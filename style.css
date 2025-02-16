@@ -1,0 +1,808 @@
+:root {
+    --warna: #FF0000;
+    --paragraf: 0.9rem;
+    --pheight: 1.5rem
+}
+
+section {
+    padding: 2rem 0;
+    /* border: 5px solid #333; */
+}
+
+/* Style untuk navbar */
+.navbar {
+    background-color: transparent;
+    /* Transparan */
+    transition: background-color 0.3s ease;
+    /* Transisi untuk perubahan warna */
+    padding: 0.3rem 0;
+    /* Padding atas dan bawah */
+    /* ... properti navbar lainnya ... */
+    backdrop-filter: blur(5px);
+    /* Efek blur awal (0px = tidak blur) */
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+    /* Transisi untuk efek blur dan warna latar belakang */
+}
+
+.navbar.scrolled {
+    background-color: rgb(0 0 0/0.5);
+    /* Warna latar belakang saat di-scroll */
+    backdrop-filter: blur(5px);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--warna);
+    text-transform: uppercase;
+}
+
+.text-brand {
+    color: white;
+    /* Warna teks logo */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    /* Warna teks menu */
+    margin-left: 1rem;
+    /* Spasi antar menu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--warna) !important;
+    /* Warna teks menu saat di-hover */
+}
+
+/* Style untuk hero (sama seperti sebelumnya) */
+
+/* ... (style lainnya) ... */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Atau tinggi yang Anda inginkan */
+    background-image: url("img/TitanSmrgJA011323--112.jpg");
+    /* Ganti dengan gambar hero Anda */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    /* Konten di tengah vertikal */
+    justify-content: center;
+    /* Konten di tengah vertikal */
+    align-items: center;
+    /* Konten di tengah horizontal */
+    color: white;
+    /* Teks berwarna putih */
+    text-align: center;
+    /* Teks rata tengah */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay gelap, sesuaikan opacity */
+    /* Efek filter, contoh: blur */
+    backdrop-filter: blur(3px);
+    /* Mungkin tidak didukung di semua browser */
+    -webkit-backdrop-filter: blur(3px);
+    /* Untuk browser berbasis WebKit */
+}
+
+.hero-content {
+    position: relative;
+    /* Di atas overlay */
+    z-index: 1;
+    /* Di atas overlay */
+    padding: 20px;
+    max-width: 60rem;
+    /* Lebar maksimum konten */
+}
+
+#hero h1 {
+    font-size: 3.2 rem;
+    /* Ukuran judul */
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 3px rgb(0 0 0/0.5);
+    color: var(--warna);
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    /* Ukuran subjudul */
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1rem;
+    /* Ukuran paragraf */
+    line-height: 1.6;
+    /* Spasi baris */
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Spasi antar tombol */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    /* Efek hover */
+}
+
+.btn-primary {
+    background-color: var(--warna);
+    /* Warna tombol utama */
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #333;
+    /* Warna tombol sekunder */
+    color: white;
+}
+
+.btn:hover {
+    background-color: white !important;
+    color: var(--warna);
+    /* Warna hover */
+    box-shadow: 2px 2px 2px rgb(0 0 0/0.3);
+}
+
+
+
+/* all section style */
+/* Style untuk bagian About Jiu-Jitsu */
+#about-jiujitsu,
+#our-instructors,
+#schedule-price,
+#contact-us,
+#articles,
+#gallery,
+#testimonials,
+#about-us {
+    background-color: #f8f9fa;
+}
+
+#about-jiujitsu h2,
+#our-instructors h2,
+#schedule-price h2,
+#contact-us h2,
+#articles h2,
+#gallery h2,
+#testimonials h2,
+#about-us h2 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+    /* letter-spacing: 1px; */
+    text-transform: uppercase;
+}
+
+#about-jiujitsu h2:hover .accent-underline,
+#our-instructors h2:hover .accent-underline,
+#schedule-price h2:hover .accent-underline,
+#contact-us h2:hover .accent-underline,
+#articles h2:hover .accent-underline,
+#gallery h2:hover .accent-underline,
+#testimonials h2:hover .accent-underline,
+#about-us h2:hover .accent-underline {
+    width: 30%;
+    /* Lebar garis bawah saat hover */
+}
+
+
+/* Accent underline */
+.accent-underline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 20%;
+    height: 3px;
+    background-color: var(--warna);
+    transition: width 0.3s ease;
+}
+
+
+
+#about-jiujitsu p {
+    font-size: var(--paragraf);
+    line-height: var(--pheight);
+    margin-bottom: 1rem;
+}
+
+#about-jiujitsu .video {
+    height: 20rem;
+    width: 100%;
+    margin: auto;
+}
+
+/* Style untuk kartu instruktur */
+.instructor-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    /* Tambahkan border */
+    padding: 20px;
+    border-radius: 10px;
+    /* Tambahkan radius border */
+    transition: transform 0.3s ease;
+    /* Animasi hover */
+    height: 35rem;
+    overflow: hidden;
+}
+
+.instructor-card:hover {
+    transform: scale(1.05);
+    /* Efek hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tambahkan shadow */
+}
+
+.instructor-card img {
+    width: 200px;
+    /* Ukuran gambar instruktur */
+    height: 200px;
+    border-radius: 50%;
+    /* Gambar bulat */
+    object-fit: cover;
+    /* Memastikan gambar menutupi area */
+    margin-bottom: 1rem;
+}
+
+.instructor-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.instructor-card p {
+    font-size: var(--paragraf);
+    line-height: 1.2;
+    text-align: justify;
+}
+
+/* Style untuk bagian Schedule & Price */
+
+#schedule-price h2,
+#schedule-price h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Style untuk tabel jadwal */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.table th,
+.table td {
+    padding: 0.3rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.table th {
+    background-color: var(--warna);
+    color: white;
+}
+
+/* Style untuk paket harga */
+.price-packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Rata tengah */
+    gap: 1rem;
+}
+
+.price-package {
+    border: 1px solid #ddd;
+    padding: 1rem 0.1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease;
+    list-style: none;
+    /* Hilangkan bullet */
+    margin-bottom: 1rem;
+    /* Margin bawah untuk spasi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Tambahkan transisi untuk box-shadow */
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.price-package:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.price-package.featured {
+    transform: scale(1.1);
+    border-color: var(--warna);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Tambahkan transisi untuk box-shadow */
+}
+
+.price-package.featured:hover {
+    transform: scale(1.2);
+    /* Efek hover lebih kuat */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Shadow lebih tebal saat hover */
+}
+
+.price-package h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.price-package p {
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    /* Spasi antar paragraf */
+}
+
+/* Style untuk card artikel */
+.article-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Mencegah gambar meluap dari card */
+    display: flex;
+    /* Menggunakan flexbox untuk tata letak */
+    flex-direction: column;
+    /* Konten di dalam card ditata secara vertikal */
+    height: 100%;
+    /* Memastikan semua card memiliki tinggi yang sama */
+}
+
+/* .article-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    /* Tinggi gambar */
+    object-fit: cover;
+    /* Memastikan gambar menutupi area */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.article-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    font-size: var(--paragraf);
+    line-height: var(--pheight);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    /* Memungkinkan cuplikan artikel memenuhi ruang yang tersisa */
+}
+
+.article-card .btn {
+    margin-top: auto;
+    /* Tombol "Read More" selalu di bawah */
+}
+
+/* Style untuk tombol "More Articles" */
+#articles .btn-secondary {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Style untuk informasi kontak */
+#contact-us p {
+    font-size: var(--paragraf);
+    line-height: var(--pheight);
+    margin-bottom: 1rem;
+}
+
+#contact-us p a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contact-us p a:hover {
+    color: var(--warna);
+}
+
+/* Style untuk peta */
+.map-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+}
+
+#contact-us p strong {
+    margin-right: 0.5rem;
+    /* Berikan sedikit jarak antara ikon dan teks */
+}
+
+#contact-us p strong i,
+/* Untuk Font Awesome atau Bootstrap Icons */
+#contact-us p strong img {
+    /* Untuk gambar ikon */
+    width: 1.2rem;
+    /* Atur ukuran ikon */
+    height: 1.2rem;
+    vertical-align: middle;
+    /* Sejajarkan ikon dengan teks */
+}
+
+/* Style untuk item galeri */
+.gallery-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Mencegah gambar meluap dari wadah */
+    cursor: pointer;
+    /* Ubah cursor menjadi pointer saat dihover */
+    height: 10rem;
+}
+
+.gallery-item img.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover img.thumbnail {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item iframe {
+    width: 100%;
+    height: 200px;
+    /* Sesuaikan tinggi video */
+    border-radius: 10px;
+    /* Tambahkan border radius */
+}
+
+/* Style untuk modal foto full screen */
+.modal-fullscreen .modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.modal-fullscreen .modal-content {
+    height: 100%;
+    border: 0;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+    /* Memusatkan gambar secara horizontal */
+    align-items: center;
+    /* Memusatkan gambar secara vertikal */
+    height: 100%;
+}
+
+.modal-body img {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+    /* Tambahkan transisi untuk animasi zoom */
+}
+
+/* Style untuk modal foto full screen */
+.modal-content {
+    background-color: rgb(0 0 0/0.5) !important;
+    /* Latar belakang transparan */
+    border: none;
+    /* Hilangkan border modal */
+    box-shadow: none;
+    /* Hilangkan shadow modal */
+}
+
+.modal-header .btn-close {
+    background-color: rgba(255, 254, 254, 0.5) !important;
+    /* Ubah warna ikon menjadi merah */
+    font-size: 0.5rem;
+    padding: 0.2;
+    /* Ubah ukuran ikon menjadi lebih besar */
+    opacity: 1;
+    /* Pastikan ikon tidak transparan */
+}
+
+/* Style untuk card testimoni */
+.testimonial-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card .rating {
+    color: #f0ad4e;
+    /* Warna rating */
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .rating i {
+    margin-right: 0.2rem;
+}
+
+.testimonial-card p {
+    font-size: var(--paragraf);
+    line-height: var(--pheight);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .author {
+    font-style: italic;
+    text-align: right;
+}
+
+/* Style untuk footer */
+.footer {
+    background-color: #333333;
+    /* Warna latar belakang footer */
+    padding: 30px 0;
+    /* Padding atas dan bawah */
+    color: #ffffff !important;
+}
+
+.footer-logo {
+    max-width: 150px;
+    /* Lebar maksimum logo */
+    border-radius: 50%;
+    /* object-fit: cover; */
+    background-color: #ffffff;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #f0ad4e;
+    /* Warna tautan saat dihover */
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.newsletter-signup {
+    margin-top: 20px;
+}
+
+.newsletter-signup input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.newsletter-signup button {
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Style untuk bagian About Us */
+
+#about-us h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#about-us p {
+    font-size: var(--paragraf);
+    line-height: var(--pheight);
+    margin-bottom: 1rem;
+}
+
+#about-us ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+/* Style untuk card cabang */
+.branch-card {
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.branch-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.branch-title {
+    padding: 10px;
+    text-align: center;
+}
+
+.branch-title h4 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    #articles{
+        display: none;
+    }        
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 1.2rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .price-package {
+        width: 100%;
+    }
+    
+    /* articles */
+    .article-card img {
+        height: 130px;
+        margin-bottom: 0.5rem;
+    }
+
+    .article-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .article-card p {
+        font-size: 70;
+        line-height: var(--pheight);
+        margin-bottom: 1rem;
+        flex-grow: 1;
+        /* Memungkinkan cuplikan artikel memenuhi ruang yang tersisa */
+    }
+
+    .article-card .btn {
+        margin-top: auto;
+        font-size: 0.9rem;
+        padding: 0.3rem;
+        /* Tombol "Read More" selalu di bawah */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {}
