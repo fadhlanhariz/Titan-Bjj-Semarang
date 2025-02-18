@@ -250,13 +250,6 @@ section {
     overflow: hidden;
 }
 
-.instructor-card:hover {
-    transform: scale(1.05);
-    /* Efek hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Tambahkan shadow */
-}
-
 .instructor-card img {
     width: 200px;
     /* Ukuran gambar instruktur */
@@ -349,7 +342,7 @@ section {
 }
 
 .price-package.featured {
-    transform: scale(1.1);
+    transform: scale(1.05);
     border-color: var(--warna);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -357,7 +350,7 @@ section {
 }
 
 .price-package.featured:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.07); */
     /* Efek hover lebih kuat */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     /* Shadow lebih tebal saat hover */
@@ -378,7 +371,7 @@ section {
 /* Style untuk card artikel */
 .article-card {
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
@@ -396,21 +389,17 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 } */
 
-.article-card img {
-    width: 100%;
-    height: 200px;
-    /* Tinggi gambar */
-    object-fit: cover;
-    /* Memastikan gambar menutupi area */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom: 1rem;
-}
 
 .article-card h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
+    margin-bottom: 0.1rem;
+    }
+    
+    .article-card .date {
+        font-size: 0.7rem;
     margin-bottom: 0.5rem;
+    color: var(--warna);
 }
 
 .article-card p {
@@ -587,11 +576,55 @@ section {
     text-align: right;
 }
 
+/* .carousel {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    overflow: hidden;
+} */
+
+.carousel-item {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* .carousel-item.active {
+    opacity: 1;
+} */
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.carousel-control span {
+    font-size: 20px;
+}
 /* Style untuk footer */
 .footer {
     background-color: #333333;
     /* Warna latar belakang footer */
-    padding: 30px 0;
+    padding: 30px 0 15px;
     /* Padding atas dan bawah */
     color: #ffffff !important;
 }
@@ -605,7 +638,7 @@ section {
 }
 
 .footer h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -613,7 +646,7 @@ section {
 .footer p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .footer ul {
@@ -675,6 +708,14 @@ section {
     font-size: 0.9rem;
 }
 
+footer .contact p {
+    margin-bottom: 0.1rem;
+}
+
+footer .contact h4 {
+    margin: 0.6rem 0 0.4rem;
+    font-weight: 800;
+}
 /* Style untuk bagian About Us */
 
 #about-us h3 {
@@ -748,9 +789,26 @@ section {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-    #articles{
-        display: none;
-    }        
+#about-jiujitsu h2,
+    #our-instructors h2,
+    #schedule-price h2,
+    #contact-us h2,
+    #articles h2,
+    #gallery h2,
+    #testimonials h2,
+    #about-us h2 {
+
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    footer .contact p {
+        font-size: 0.9rem;
+    }
+
+    footer .contact {
+        margin: 1rem 0;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -770,7 +828,7 @@ section {
     .price-package {
         width: 100%;
     }
-    
+
     /* articles */
     .article-card img {
         height: 130px;

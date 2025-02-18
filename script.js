@@ -37,3 +37,44 @@ modalImage.addEventListener('click', () => {
     modalImage.style.transform = `scale(${currentScale})`;
 });
 
+// carousel
+const carousel = document.querySelector('.carousel');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.carousel-control.prev');
+const nextButton = document.querySelector('.carousel-control.next');
+
+let currentItem = 0;
+
+function showItem(index) {
+    carouselItems.forEach((item, i) => {
+        if (i === index) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+}
+
+function nextItem() {
+    currentItem = (currentItem + 1) % carouselItems.length;
+    showItem(currentItem);
+}
+
+function prevItem() {
+    currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
+    showItem(currentItem);
+}
+
+nextButton.addEventListener('click', nextItem);
+prevButton.addEventListener('click', prevItem);
+
+// Autoplay (opsional)
+let autoplayInterval = setInterval(nextItem, 3000);
+
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoplayInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    autoplayInterval = setInterval(nextItem, 3000);
+});
