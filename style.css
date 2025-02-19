@@ -659,12 +659,12 @@ section {
 }
 
 .footer a {
-    color: #ffffff;
+    color: var(--warna);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #f0ad4e;
+    color: #ffffff;
     /* Warna tautan saat dihover */
 }
 
@@ -678,6 +678,10 @@ section {
 
 .social-icons a {
     color: #ffffff;
+    font-size: 1.2rem;
+}
+.social-icons a:hover {
+    color: var(--warna);
     font-size: 1.2rem;
 }
 
@@ -710,11 +714,13 @@ section {
 
 footer .contact p {
     margin-bottom: 0.1rem;
+    font-size: 0.9rem;
 }
 
 footer .contact h4 {
     margin: 0.6rem 0 0.4rem;
-    font-weight: 800;
+    font-weight: 700;
+        color: var(--warna);
 }
 /* Style untuk bagian About Us */
 
@@ -765,6 +771,19 @@ footer .contact h4 {
     font-size: 0.8rem;
     font-weight: bold;
     margin-bottom: 0;
+}
+#about-us .history a {
+    color: var(--warna);
+    text-decoration: none;
+}
+
+#about-us .history a:hover {
+    color: blue;
+}
+
+#about-us .branch-card a {
+    text-decoration: none;
+    color: inherit;
 }
 
 
