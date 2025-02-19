@@ -394,10 +394,10 @@ section {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.1rem;
-    }
-    
-    .article-card .date {
-        font-size: 0.7rem;
+}
+
+.article-card .date {
+    font-size: 0.7rem;
     margin-bottom: 0.5rem;
     color: var(--warna);
 }
@@ -603,9 +603,9 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+        color: black;
+        padding: 5px;
     cursor: pointer;
 }
 
@@ -620,6 +620,7 @@ section {
 .carousel-control span {
     font-size: 20px;
 }
+
 /* Style untuk footer */
 .footer {
     background-color: #333333;
@@ -680,6 +681,7 @@ section {
     color: #ffffff;
     font-size: 1.2rem;
 }
+
 .social-icons a:hover {
     color: var(--warna);
     font-size: 1.2rem;
@@ -720,8 +722,9 @@ footer .contact p {
 footer .contact h4 {
     margin: 0.6rem 0 0.4rem;
     font-weight: 700;
-        color: var(--warna);
+    color: var(--warna);
 }
+
 /* Style untuk bagian About Us */
 
 #about-us h3 {
@@ -772,6 +775,7 @@ footer .contact h4 {
     font-weight: bold;
     margin-bottom: 0;
 }
+
 #about-us .history a {
     color: var(--warna);
     text-decoration: none;
@@ -808,7 +812,8 @@ footer .contact h4 {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-#about-jiujitsu h2,
+
+    #about-jiujitsu h2,
     #our-instructors h2,
     #schedule-price h2,
     #contact-us h2,
