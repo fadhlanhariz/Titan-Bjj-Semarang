@@ -246,7 +246,7 @@ section {
     /* Tambahkan radius border */
     transition: transform 0.3s ease;
     /* Animasi hover */
-    height: 35rem;
+    height: 43rem;
     overflow: hidden;
 }
 
